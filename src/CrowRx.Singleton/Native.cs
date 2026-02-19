@@ -1,6 +1,4 @@
-﻿// ReSharper disable InconsistentNaming
-
-using System;
+﻿using System;
 
 
 namespace CrowRx.Singleton
@@ -8,14 +6,14 @@ namespace CrowRx.Singleton
     public class Native<TInstance>
         where TInstance : Native<TInstance>, IInstance
     {
-        private static TInstance _instance;
-        
+        private static TInstance? _instance;
+
 
         public static TInstance Instance
         {
             get
             {
-                if (IsValid)
+                if (_instance is not null)
                 {
                     return _instance;
                 }
