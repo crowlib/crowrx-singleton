@@ -9,7 +9,7 @@
         "com.cysharp.unitask": "2.5.10",
         "com.cysharp.zlinq": "1.5.4"
       },
-      "hash": "5936065a6d440b4524488b73955ead939ae74c37"
+      "hash": "e0e0bb07abac878b5a25dd0afde73e93f8187470"
     },
     "com.cysharp.r3": {
       "version": "https://github.com/Cysharp/R3.git?path=src/R3.Unity/Assets/R3.Unity",
@@ -42,7 +42,7 @@
       "hash": "c2af83c9d4f8cdaada9d4a0e94de2f195d8e1d01"
     },
     "com.unity.ai.navigation": {
-      "version": "2.0.10",
+      "version": "2.0.11",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -189,7 +189,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.8.10",
+      "version": "1.8.11",
       "depth": 0,
       "source": "registry",
       "dependencies": {
