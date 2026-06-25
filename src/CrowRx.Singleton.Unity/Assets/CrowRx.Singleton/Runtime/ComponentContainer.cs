@@ -32,7 +32,7 @@ namespace CrowRx.Singleton
 
                 try
                 {
-                    TComponent[] objects = Object.FindObjectsByType<TComponent>(FindObjectsSortMode.None);
+                    TComponent[] objects = Object.FindObjectsByType<TComponent>();
 
                     if (objects == null || objects.Length == 0)
                     {

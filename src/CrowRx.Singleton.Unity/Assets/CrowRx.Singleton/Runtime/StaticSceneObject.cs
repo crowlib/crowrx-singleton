@@ -18,7 +18,7 @@ namespace CrowRx.Singleton
                     return _instance;
                 }
 
-                TComponent[] objects = FindObjectsByType<TComponent>(FindObjectsSortMode.None);
+                TComponent[] objects = FindObjectsByType<TComponent>();
 
                 if (objects == null || objects.Length == 0)
                 {
