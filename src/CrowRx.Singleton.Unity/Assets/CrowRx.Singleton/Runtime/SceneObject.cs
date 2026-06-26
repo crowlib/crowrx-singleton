@@ -1,13 +1,7 @@
-﻿// ReSharper disable InconsistentNaming
-
-using System;
-using UnityEngine;
-
+﻿using System;
 
 namespace CrowRx.Singleton
 {
-    using Utility;
-
     public abstract class SceneObject<TComponent> : MonoBehaviourCrowRx, IInstance
         where TComponent : SceneObject<TComponent>
     {

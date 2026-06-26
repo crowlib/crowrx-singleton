@@ -2,12 +2,8 @@
 using R3;
 using R3.Triggers;
 
-
 namespace CrowRx.Singleton
 {
-    using Utility;
-
-
     /// <summary>
     /// <see cref="MonoBehaviour"/>를 상속받지 않는 singleton container. <see cref="Object.DontDestroyOnLoad"/> 사용
     /// </summary>

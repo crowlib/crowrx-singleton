@@ -1,16 +1,11 @@
-﻿// ReSharper disable InconsistentNaming
-
-using System;
+﻿using System;
 using UnityEngine;
 using R3;
 using R3.Triggers;
 
-
 namespace CrowRx.Singleton
 {
-    using Utility;
     using Object = UnityEngine.Object;
-
 
     /// <summary>
     /// <see cref="MonoBehaviour"/>를 상속받지 않는 singleton container

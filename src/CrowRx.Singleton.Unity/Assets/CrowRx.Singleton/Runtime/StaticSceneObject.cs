@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 
-
 namespace CrowRx.Singleton
 {
-    using Utility;
-
-
     public abstract class StaticSceneObject<TComponent> : SceneObject<TComponent>
         where TComponent : StaticSceneObject<TComponent>
     {
