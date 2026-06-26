@@ -3,11 +3,10 @@
 
 namespace CrowRx.Singleton
 {
-    public class Native<TInstance>
-        where TInstance : Native<TInstance>, IInstance
+    public abstract class Native<TInstance> : IInstance
+        where TInstance : Native<TInstance>
     {
         private static TInstance? _instance;
-
 
         public static TInstance Instance
         {
@@ -26,5 +25,17 @@ namespace CrowRx.Singleton
         }
 
         public static bool IsValid => _instance is not null;
+
+        public void Init() => OnInit();
+        
+        public void Release()
+        {
+            OnRelease();
+
+            _instance = null;
+        }
+
+        protected abstract void OnInit();
+        protected abstract void OnRelease();
     }
 }

@@ -8,12 +8,10 @@ namespace CrowRx.Singleton
 {
     using Utility;
 
-
     public abstract class SceneObject<TComponent> : MonoBehaviourCrowRx, IInstance
-        where TComponent : SceneObject<TComponent>, IInstance
+        where TComponent : SceneObject<TComponent>
     {
         protected static TComponent _instance;
-
 
         public static TComponent Instance
         {
@@ -66,14 +64,7 @@ namespace CrowRx.Singleton
             _instance?.Init();
         }
 
-        private void OnDestroy()
-        {
-            if (_instance)
-            {
-                _instance.Release();
-                _instance = null;
-            }
-        }
+        private void OnDestroy() => Release();
 
         private void Start() => OnStart();
 
@@ -83,7 +74,16 @@ namespace CrowRx.Singleton
         // This function is called when the instance is used the first time
         // Put all the initializations you need here, as you would do in Awake
         public void Init() => OnInit();
-        public void Release() => OnRelease();
+
+        public void Release()
+        {
+            if (IsValid)
+            {
+                OnRelease();
+
+                _instance = null;
+            }
+        }
 
         protected virtual void OnInit()
         {

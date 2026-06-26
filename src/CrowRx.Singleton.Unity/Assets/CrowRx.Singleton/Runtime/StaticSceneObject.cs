@@ -7,7 +7,7 @@ namespace CrowRx.Singleton
 
 
     public abstract class StaticSceneObject<TComponent> : SceneObject<TComponent>
-        where TComponent : StaticSceneObject<TComponent>, IInstance
+        where TComponent : StaticSceneObject<TComponent>
     {
         public new static TComponent Instance
         {

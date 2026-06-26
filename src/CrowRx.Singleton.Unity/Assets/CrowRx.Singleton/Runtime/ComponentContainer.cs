@@ -15,11 +15,10 @@ namespace CrowRx.Singleton
     /// <summary>
     /// <see cref="MonoBehaviour"/>를 상속받지 않는 singleton container
     /// </summary>
-    public class ComponentContainer<TComponent>
+    public abstract class ComponentContainer<TComponent>
         where TComponent : Component, IInstance
     {
         protected static TComponent _instance;
-
 
         public static TComponent Instance
         {
