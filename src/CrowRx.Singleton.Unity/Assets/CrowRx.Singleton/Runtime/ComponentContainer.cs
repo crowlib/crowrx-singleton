@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using Unity.Scripting.LifecycleManagement;
 using R3;
 using R3.Triggers;
 
@@ -10,10 +11,10 @@ namespace CrowRx.Singleton
     /// <summary>
     /// <see cref="MonoBehaviour"/>를 상속받지 않는 singleton container
     /// </summary>
-    public abstract class ComponentContainer<TComponent>
+    public abstract partial class ComponentContainer<TComponent>
         where TComponent : Component, IInstance
     {
-        protected static TComponent _instance;
+        [AutoStaticsCleanup] protected static TComponent _instance;
 
         public static TComponent Instance
         {

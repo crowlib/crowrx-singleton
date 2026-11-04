@@ -1,11 +1,12 @@
 ﻿using System;
+using Unity.Scripting.LifecycleManagement;
 
 namespace CrowRx.Singleton
 {
-    public abstract class SceneObject<TComponent> : MonoBehaviourCrowRx, IInstance
+    public abstract partial class SceneObject<TComponent> : MonoBehaviourCrowRx, IInstance
         where TComponent : SceneObject<TComponent>
     {
-        protected static TComponent _instance;
+        [AutoStaticsCleanup] protected static TComponent _instance;
 
         public static TComponent Instance
         {
